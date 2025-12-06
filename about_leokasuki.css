@@ -10,7 +10,20 @@ body {
             min-height: 100vh;
         }
 
-        .container {
+        .container_pfp {
+            width: 90%;
+            max-width: 200px;
+            max-height: 180px;
+            background: #1a1a1a;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.4);
+            animation: fadeIn 0.8s ease forwards;
+            opacity: 0;
+            margin-bottom: 705px;
+        }
+
+        .container_about_me {
             width: 90%;
             max-width: 700px;
             background: #1a1a1a;
@@ -19,6 +32,41 @@ body {
             box-shadow: 0 0 20px rgba(0,0,0,0.4);
             animation: fadeIn 0.8s ease forwards;
             opacity: 0;
+            margin-bottom: 600px;
+        }
+
+        .container_hobbies {
+            width: 90%;
+            max-width: 700px;
+            height: 550px;
+            background: #1a1a1a;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.4);
+            animation: fadeIn 0.8s ease forwards;
+            opacity: 0;
+            margin-bottom: 305px;
+        }
+
+        .hobbies-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .hobbies-list .hobby {
+            margin: 10px 0;
+            cursor: pointer;
+        }
+
+        .hobbies-list .details {
+            display: none; /* Details standardmäßig verstecken */
+            margin-left: 20px;
+            list-style-type: circle;
+            color: #aaa;
+        }
+
+        .hobbies-list .title {
+            font-weight: bold;
         }
 
         @keyframes fadeIn {
