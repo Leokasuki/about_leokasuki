@@ -8,7 +8,13 @@ body {
             justify-content: center;
             align-items: flex-start;
             min-height: 100vh;
+
+            background-image: url("about_me_images/Wallpaper background from yume nikki.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
+
 
         .container_pfp {
             width: 90%;
@@ -20,8 +26,7 @@ body {
             box-shadow: 0 0 20px rgba(0,0,0,0.4);
             animation: fadeIn 0.8s ease forwards;
             opacity: 0;
-            margin-bottom: 705px;
-            margin-right: 10px;
+            margin-right: 12px;
         }
 
         .container_about_me {
@@ -145,24 +150,61 @@ body {
             background: #1a1a1a;
             padding: 40px;
             border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.4);
             animation: fadeIn 0.8s ease forwards;
             opacity: 0;
 
             display: flex;
             flex-direction: column;
             align-items: center;
+            background: rgba(56, 1, 70, 0.7);
         }
 
         .container_about_me_inner {
             width: 100%;
             padding: 0;
             margin: 0;
-
             align-self: flex-start;
+            background: rgba(0, 0, 0, 0);
         }
 
         .container_about_me_wrapper[style],
         .container_about_me_wrapper {
             opacity: 1;
+            background: rgba(56, 1, 70, 0.7);
+        }
+
+        .container_pfp,
+        .container_about_me,
+        .container_links,
+        .container_hobbies {
+            background: rgba(56, 1, 70, 0.7);
+        }
+
+        .container_gif {
+            width: 280px;
+            height: 487.2px;
+            background: rgba(56, 1, 70, 0.7);
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+            animation: fadeIn 0.8s ease forwards;
+            opacity: 0;
+            margin-right: 12px;
+        }
+
+        .container_gif img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .pfp-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
         }
