@@ -1,210 +1,167 @@
 body {
-            margin: 0;
-            padding: 120px 0 0 0;
-            font-family: Arial, sans-serif;
-            background: #0f0f0f;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            min-height: 100vh;
+    margin: 0;
+    padding: 120px 0 0 0;
+    font-family: Arial, sans-serif;
+    background: #0f0f0f;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-image: url("about_me_images/Wallpaper background from yume nikki.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
-            background-image: url("about_me_images/Wallpaper background from yume nikki.png");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
+/* ----- Common box components ----- */
+.container_pfp,
+.container_about_me,
+.container_links,
+.container_hobbies,
+.container_gif,
+.container_about_me_wrapper {
+    background: rgba(56, 1, 70, 0.7);
+    border-radius: 15px;
+    animation: fadeIn 0.8s ease forwards;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    opacity: 0;
+}
 
+/* ----- Container ----- */
+.container_pfp {
+    width: 90%;
+    max-width: 200px;
+    max-height: 180px;
+    padding: 40px;
+    margin-right: 12px;
+}
 
-        .container_pfp {
-            width: 90%;
-            max-width: 200px;
-            max-height: 180px;
-            background: #1a1a1a;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.4);
-            animation: fadeIn 0.8s ease forwards;
-            opacity: 0;
-            margin-right: 12px;
-        }
+.container_about_me_wrapper {
+    width: 90%;
+    max-width: 700px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-        .container_about_me {
-            width: 90%;
-            max-width: 700px;
-            background: #1a1a1a;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.4);
-            animation: fadeIn 0.8s ease forwards;
-            opacity: 0;
-            margin-bottom: 600px;
-        }
+.container_about_me_inner {
+    width: 100%;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+}
 
-        .container_hobbies {
-            width: 90%;
-            max-width: 300px;
-            height: 650px;
-            background: #1a1a1a;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.4);
-            animation: fadeIn 0.8s ease forwards;
-            opacity: 0;
-            margin-bottom: 210px;
-            margin-left: 10px;
-        }
+.container_links {
+    width: 90%;
+    max-width: 700px;
+    padding: 40px;
+    text-align: center;
+    margin-bottom: 205px;
+}
 
-        .container_links {
-            width: 90%;
-            max-width: 700px;
-            background: #1a1a1a;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.4);
-            animation: fadeIn 0.8s ease forwards;
-            opacity: 0;
-            margin-bottom: 205px;
-            text-align: center;
-        }
+.container_hobbies {
+    width: 90%;
+    max-width: 300px;
+    height: 650px;
+    padding: 40px;
+    margin-bottom: 210px;
+    margin-left: 10px;
+}
 
+.container_gif {
+    width: 280px;
+    height: 487.2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0 0 0;
+    margin-right: 12px;
+}
 
-        .hobbies-list {
-            list-style: none;
-            padding-left: 0;
-        }
+.container_gif img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
 
-        .hobbies-list .hobby {
-            margin: 10px 0;
-            cursor: pointer;
-        }
+/* ----- Structure & Layout ----- */
+.pfp-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
 
-        .hobbies-list .details {
-            display: none; /* Details standardmäßig verstecken */
-            margin-left: 20px;
-            list-style-type: circle;
-            color: #aaa;
-        }
+.about-links-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 400px;
+}
 
-        .hobbies-list .title {
-            font-weight: bold;
-        }
+.hobbies-list {
+    list-style: none;
+    padding: 0;
+}
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+.hobby {
+    margin: 10px 0;
+    cursor: pointer;
+}
 
-        h1 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
+.hobbies-list .details {
+    display: none;
+    margin-left: 20px;
+    list-style-type: circle;
+    color: #aaa;
+}
 
-        h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
+.hobbies-list .title {
+    font-weight: bold;
+}
 
-        .profile-img {
-            width: 130px;
-            height: 130px;
-            border-radius: 50%;
-            object-fit: cover;
-            display: block;
-            margin: 0 auto 20px auto;
-            border: 3px solid #555;
-        }
+/* ----- Typography ----- */
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
-        p {
-            line-height: 1.6;
-            font-size: 1.05rem;
-            text-align: center;
-        }
+p {
+    text-align: center;
+    line-height: 1.6;
+    font-size: 1.05rem;
+}
 
-        .socials a {
-            margin: 0 10px;
-            color: #4da3ff;
-            text-decoration: none;
-            font-size: 1.1rem;
-        }
+/* ----- Profilpicture ----- */
+.profile-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 20px auto;
+    border: 3px solid #555;
+}
 
-        .socials a:hover {
-            text-decoration: underline;
-        }
-        .about-links-wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 16px;
-            width: 100%;
-            max-width: 700px;
-            margin-bottom: 400px;
-        }
-        .about-links-wrapper .container_about_me {
-            margin-bottom: 0;
-            }
+/* ----- Social Links ----- */
+.socials a {
+    margin: 0 10px;
+    color: #4da3ff;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
 
-        .container_about_me_wrapper {
-            width: 90%;
-            max-width: 700px;
-            background: #1a1a1a;
-            padding: 40px;
-            border-radius: 15px;
-            animation: fadeIn 0.8s ease forwards;
-            opacity: 0;
+.socials a:hover {
+    text-decoration: underline;
+}
 
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background: rgba(56, 1, 70, 0.7);
-        }
-
-        .container_about_me_inner {
-            width: 100%;
-            padding: 0;
-            margin: 0;
-            align-self: flex-start;
-            background: rgba(0, 0, 0, 0);
-        }
-
-        .container_about_me_wrapper[style],
-        .container_about_me_wrapper {
-            opacity: 1;
-            background: rgba(56, 1, 70, 0.7);
-        }
-
-        .container_pfp,
-        .container_about_me,
-        .container_links,
-        .container_hobbies {
-            background: rgba(56, 1, 70, 0.7);
-        }
-
-        .container_gif {
-            width: 280px;
-            height: 487.2px;
-            background: rgba(56, 1, 70, 0.7);
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.4);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 20px 0;
-            animation: fadeIn 0.8s ease forwards;
-            opacity: 0;
-            margin-right: 12px;
-        }
-
-        .container_gif img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 15px;
-        }
-
-        .pfp-wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
+/* ----- Animations ----- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
