@@ -25,3 +25,7 @@ Things I'm gonna add in the future:
 -My speaking languages and programming languages
 
 -My favorite linux Distributions
+
+-lokalizations (English/German/Russian)
+
+-Images I wanna post
