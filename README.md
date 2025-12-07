@@ -1,0 +1,1 @@
+Thats my own website, I wanna make for people that want to know more about me and also for improving my programming skills, I adding many gifs and many things I like to this website and someday I will look back on my beautiful work of art.
