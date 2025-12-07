@@ -1,6 +1,2 @@
 {
-  "version": 2,
-  "rewrites": [
-    { "source": "/", "destination": "/about_leokasuki.html" }
-  ]
 }
