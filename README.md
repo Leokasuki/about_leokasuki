@@ -6,7 +6,7 @@ Things I'm gonna add in the future:
 
 -My favorite music genres
 
--My favorite music artits
+-My favorite music artists
 
 -My favorite PC games
 
