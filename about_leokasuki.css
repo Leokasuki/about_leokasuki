@@ -1,12 +1,12 @@
 body {
             margin: 0;
-            padding: 0;
+            padding: 120px 0 0 0;
             font-family: Arial, sans-serif;
             background: #0f0f0f;
             color: white;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             min-height: 100vh;
         }
 
@@ -21,6 +21,7 @@ body {
             animation: fadeIn 0.8s ease forwards;
             opacity: 0;
             margin-bottom: 705px;
+            margin-right: 10px;
         }
 
         .container_about_me {
@@ -38,15 +39,30 @@ body {
         .container_hobbies {
             width: 90%;
             max-width: 300px;
-            height: 550px;
+            height: 650px;
             background: #1a1a1a;
             padding: 40px;
             border-radius: 15px;
             box-shadow: 0 0 20px rgba(0,0,0,0.4);
             animation: fadeIn 0.8s ease forwards;
             opacity: 0;
-            margin-bottom: 305px;
+            margin-bottom: 210px;
+            margin-left: 10px;
         }
+
+        .container_links {
+            width: 90%;
+            max-width: 700px;
+            background: #1a1a1a;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.4);
+            animation: fadeIn 0.8s ease forwards;
+            opacity: 0;
+            margin-bottom: 205px;
+            text-align: center;
+        }
+
 
         .hobbies-list {
             list-style: none;
@@ -100,11 +116,6 @@ body {
             text-align: center;
         }
 
-        .socials {
-            margin-top: 25px;
-            text-align: center;
-        }
-
         .socials a {
             margin: 0 10px;
             color: #4da3ff;
@@ -114,4 +125,44 @@ body {
 
         .socials a:hover {
             text-decoration: underline;
+        }
+        .about-links-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            width: 100%;
+            max-width: 700px;
+            margin-bottom: 400px;
+        }
+        .about-links-wrapper .container_about_me {
+            margin-bottom: 0;
+            }
+
+        .container_about_me_wrapper {
+            width: 90%;
+            max-width: 700px;
+            background: #1a1a1a;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.4);
+            animation: fadeIn 0.8s ease forwards;
+            opacity: 0;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container_about_me_inner {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+
+            align-self: flex-start;
+        }
+
+        .container_about_me_wrapper[style],
+        .container_about_me_wrapper {
+            opacity: 1;
         }
