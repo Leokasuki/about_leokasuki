@@ -75,7 +75,7 @@ if (window.innerWidth <= 768) {
     const audio = new Audio('about_me_mp3,mp4/maintenance work.mp3');
     audio.loop = true;
     audio.volume = 1;
-    audio.play().catch(() => {
-        console.log("Autoplay blockiert, der Nutzer muss einmal tippen");
-    });
+    document.body.addEventListener('click', () => {
+        audio.play();
+    }, { once: true });
 }
