@@ -1,3 +1,5 @@
+
+/* ----- Body styling ----- */
 body {
     margin: 0;
     padding: 120px 0 0 0;
@@ -55,10 +57,10 @@ body {
 
 .container_links {
     width: 90%;
-    max-width: 700px;
+    max-width: 203px;
     padding: 40px;
     text-align: center;
-    margin-bottom: 205px;
+    margin-right: 12px;
 }
 
 .container_hobbies {
@@ -76,7 +78,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px 0 0 0;
     margin-right: 12px;
 }
 
