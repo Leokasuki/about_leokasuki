@@ -26,7 +26,7 @@ const imageList = [
 ];
 
 const container = document.getElementById("scrollContent");
-container.style.visibility = "hidden"; // noch unsichtbar
+container.style.visibility = "hidden";
 
 let position = 0;
 const scrollSpeed = 1;
@@ -38,7 +38,6 @@ function appendImage(src) {
     container.appendChild(img);
 }
 
-// Scroll-Animation
 function animate() {
     position -= scrollSpeed;
     container.style.transform = `translateY(${position}px)`;
@@ -50,7 +49,6 @@ function animate() {
     requestAnimationFrame(animate);
 }
 
-// GIFs vorab laden
 function preloadImages(list, callback) {
     let loaded = 0;
     const total = list.length;
@@ -66,10 +64,9 @@ function preloadImages(list, callback) {
     });
 }
 
-// Nach Preload die Bilder in den Container einfügen
 preloadImages(imageList, () => {
     imageList.forEach(src => appendImage(src));
-    imageList.forEach(src => appendImage(src)); // doppelte GIFs
-    container.style.visibility = "visible"; // sichtbar
-    animate(); // Animation starten
-});
+    imageList.forEach(src => appendImage(src));
+    container.style.visibility = "visible";
+    animate();
+});v
