@@ -166,3 +166,24 @@ p {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
+.scroll-wrapper {
+    width: 550px;
+    height: 1300px; 
+    overflow: hidden; 
+    position: absolute;
+    left: 10px; 
+    top: 10px;
+    border-radius: 10px;
+}
+
+.scroll-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.scroll-content img {
+    width: 100%;
+    border-radius: 10px;
+}
