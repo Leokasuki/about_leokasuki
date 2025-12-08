@@ -14,6 +14,9 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    overflow: hidden; 
+    width: 100vw; 
+    height: 1080px;
 }
 
 /* ----- Common box components ----- */
@@ -108,6 +111,7 @@ body {
     position: relative;
     display: flex;
     align-items: flex-start;
+    
 }
 
 .about-me-wrapper {
@@ -198,4 +202,14 @@ p {
 .scroll-content img {
     width: 100%;
     border-radius: 10px;
+}
+
+.spacer-right {
+    width: 550px;
+    height: 1300px;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    margin-left: 10px;
+    z-index: 1;
 }
