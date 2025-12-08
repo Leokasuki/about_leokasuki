@@ -28,13 +28,15 @@ body {
     animation: fadeIn 0.8s ease forwards;
     box-shadow: 0 0 20px rgba(0,0,0,0.4);
     opacity: 0;
+    border-width: 20px;
+    border-style: solid;
+    border-image: url("about_me_images/container border.png") 30 stretch;
 }
 
 /* ----- Container ----- */
 .container_pfp {
     width: 90%;
     max-width: 200px;
-    max-height: 180px;
     padding: 40px;
     margin-right: 12px;
 }
@@ -66,7 +68,6 @@ body {
 .container_hobbies {
     width: 90%;
     max-width: 300px;
-    height: 650px;
     padding: 40px;
     margin-bottom: 210px;
     margin-left: 10px;
@@ -145,7 +146,7 @@ p {
     height: 130px;
     border-radius: 50%;
     object-fit: cover;
-    margin: 0 auto 20px auto;
+    margin: auto auto auto 30px;
     border: 3px solid #555;
 }
 
