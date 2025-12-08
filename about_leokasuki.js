@@ -69,4 +69,4 @@ preloadImages(imageList, () => {
     imageList.forEach(src => appendImage(src));
     container.style.visibility = "visible";
     animate();
-});v
+});
