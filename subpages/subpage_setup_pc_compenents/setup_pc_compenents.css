@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    padding: 120px 0 0 0;
+    font-family: Arial, sans-serif;
+    background: #0f0f0f;
+    color: white;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url("about_me_images/Wallpaper background from yume nikki.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-width: 1300px;
+    overflow: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 700px;
+    background: #1a1a1a;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    animation: fadeIn 0.8s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    line-height: 1.6;
+    font-size: 1.05rem;
+}
+
+.desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    height: 1300px;
+}
+
+.mobile {
+  display: none;
+  background: orange;
+  color: white;
+  padding: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 15px; 
+}
+
+@media (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+}
+
+.taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 55px;
+  background: #300036;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #404040;
+  display: flex;
+  align-items: center;
+  z-index: 9999;
+  padding: 0 10px;
+
+}
+
+.start-button {
+    width: 70px;
+    height: 100%;
+  margin: 0 0 0 -15px;
+  background: #650072;
+  border: hidden;
+}
+
+.tux_with_gun {
+    margin-left: -15px;
+}
+
+.tux-message {
+    left: -3.5px;
+    bottom: -1px;
+    font-size: 16px;
+    background-color: #650072;
+    position: absolute;
+    margin: 0 5px 0 0;
+    padding: 2px 2px;
+    display: inline-block;
+    box-sizing: border-box;
+    line-height: 10px;
+}

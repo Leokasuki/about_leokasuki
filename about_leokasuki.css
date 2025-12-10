@@ -242,12 +242,12 @@ p {
   }
 }
 
-#taskbar {
+.taskbar {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 40px;
+  height: 55px;
   background: #300036;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #404040;
@@ -258,7 +258,7 @@ p {
 
 }
 
-#start-button {
+.start-button {
     width: 70px;
     height: 100%;
   margin: 0 0 0 -15px;
@@ -268,6 +268,19 @@ p {
 
 .tux_with_gun {
     margin-left: -15px;
+}
+
+.tux-message {
+    left: -3.5px;
+    bottom: -1px;
+    font-size: 16px;
+    background-color: #650072;
+    position: absolute;
+    margin: 0 5px 0 0;
+    padding: 2px 2px;
+    display: inline-block;
+    box-sizing: border-box;
+    line-height: 10px;
 }
 
 .computer-icon {
