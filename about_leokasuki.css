@@ -6,16 +6,14 @@ body {
     font-family: Arial, sans-serif;
     background: #0f0f0f;
     color: white;
-    display: flex;
     justify-content: center;
     align-items: flex-start;
-    min-height: 100vh;
     background-image: url("about_me_images/Wallpaper background from yume nikki.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 100%; 
-    height: 100%;
+    min-width: 1300px;
+    overflow: hidden;
 }
 
 /* ----- Common box components ----- */
@@ -75,7 +73,7 @@ body {
 
 .container_hobbies {
     width: 90%;
-    max-width: 300px;
+    max-width: 400px;
     padding: 40px;
 }
 
@@ -193,13 +191,14 @@ p {
 }
 
 .spacer-right {
-    width: 550px;
+    width: 200px;
     height: 1300px;
     overflow: hidden;
     border-radius: 10px;
     position: relative;
     z-index: 1;
     margin: 0;
+    margin-left: -20px;
 }
 
 .desktop {
@@ -208,6 +207,14 @@ p {
     justify-content: center;
     align-items: flex-start;
     gap: 40px;
+    height: 1300px;
+}
+
+.page-layout {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
 }
 
 .mobile {
@@ -247,7 +254,8 @@ p {
   display: flex;
   align-items: center;
   z-index: 9999;
-padding: 0 10px;
+  padding: 0 10px;
+
 }
 
 #start-button {
@@ -260,4 +268,13 @@ padding: 0 10px;
 
 .tux_with_gun {
     margin-left: -15px;
+}
+
+.computer-icon {
+    position: relative;
+    top: 0px;
+    right: 0px;
+    height: 70px;
+    width: 70px;
+    z-index: 10;
 }
