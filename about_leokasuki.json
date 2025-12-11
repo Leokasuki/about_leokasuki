@@ -1,2 +1,8 @@
 {
+  "rewrites": [
+    {
+      "source": "/setup_pc_compenents",
+      "destination": "/subpages/subpage_setup_pc_compenents/setup_pc_compenents.html"
+    }
+  ]
 }
