@@ -13,7 +13,12 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     min-width: 1300px;
-    overflow: hidden;
+    overflow:scroll;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 /* ----- Common box components ----- */
@@ -132,12 +137,14 @@ body {
 h1, h2 {
     text-align: center;
     margin-bottom: 20px;
+    font-family: 'Lucida Console', monospace;
 }
 
 p {
     text-align: center;
     line-height: 1.6;
     font-size: 1.05rem;
+    font-family: 'Lucida Console', monospace;
 }
 
 /* ----- Profilpicture ----- */
@@ -215,6 +222,7 @@ p {
     justify-content: center;
     align-items: flex-start;
     position: relative;
+    font-family: 'Lucida Console', monospace;
 }
 
 .mobile {
@@ -230,6 +238,7 @@ p {
   width: 90%;
   max-width: 400px;
   border-radius: 15px; 
+  font-family: 'Lucida Console', monospace;
 }
 
 @media (max-width: 768px) {
@@ -290,4 +299,87 @@ p {
     height: 70px;
     width: 70px;
     z-index: 10;
+}
+
+.chara {
+  position: absolute;
+    bottom: -200px;
+    right: 0px;
+    width: 120px;
+    animation: fly-diagonal-chara 26s linear infinite;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fly-diagonal-chara {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-100vw, -1420px)
+    }
+}
+
+.mettaton {
+    position: fixed;
+    bottom: 29px;
+    left: 630px;
+    width: 120px;
+}
+
+.yuuka {
+  position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 120px;
+    animation: fly-diagonal-yuuka 5s linear infinite;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fly-diagonal-yuuka {
+    0% {
+        transform: translate(0, -100);
+    }
+    100% {
+        transform: translate(-35vw, 145vh);
+    }
+}
+
+.nyan-cat {
+  position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 120px;
+    animation: fly-diagonal-nyan-cat 15s linear infinite;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fly-diagonal-nyan-cat {
+    0% {
+        transform: translate(-100vw, 0);
+    }
+    100% {
+        transform: translate(20vw, 0);
+    }
+}
+
+.crusty-pizza {
+  position: absolute;
+    top: 47px;
+    right: 0px;
+    width: 120px;
+    animation: fly-diagonal-crusty-pizza 25s linear infinite;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fly-diagonal-crusty-pizza {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-200vw, 0);
+    }
 }
