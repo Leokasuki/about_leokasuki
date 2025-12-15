@@ -9,8 +9,7 @@ body {
     background-image: url("setup_pc_compenents_images/half\ life\ background.jpg");
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    height: 1800px;
+    height: 1900px;
     user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
@@ -21,10 +20,12 @@ body {
     max-width: 1300px;
     height: 680px;
     padding: 40px;
+    margin-left: 500px;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0,0,0,0.4);
     animation: fadeIn 0.8s ease forwards;
     background: rgba(238, 98, 5, 0.4);
+    z-index: 2;
 }
 
 .setup-container {
@@ -100,6 +101,7 @@ background: #7f0090;
 .indicator.active { width: 18px; height: 18px; background: #ff4dff; }
 
 .desktop {
+  position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -202,7 +204,7 @@ background: #7f0090;
 
 .tenna {
   position: fixed;
-    bottom: 0px;
+    bottom: 1px;
     right: 500px;
     width: 80px;
     animation: fly-diagonal-tenna 26s linear infinite;
@@ -217,4 +219,20 @@ background: #7f0090;
     100% {
         transform: translate(-290vw, -290vh);
     }
+}
+
+.flandre {
+  position: fixed;
+    bottom: 59px;
+    left: 630px;
+    width: 120px;
+}
+
+.emu {
+  position: absolute;
+  z-index: 0;
+  top: 20px;
+  left: -300px;
+  width: 1220px;
+  pointer-events: none;
 }
