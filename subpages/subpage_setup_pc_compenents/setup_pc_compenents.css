@@ -3,7 +3,7 @@ body {
     padding: 120px 0 0 0;
     font-family: Arial, sans-serif;
     background: #0f0f0f;
-    color: white;
+    color: rgb(109, 0, 199);
     justify-content: center;
     align-items: flex-start;
     background-image: url("setup_pc_compenents_images/half\ life\ background.jpg");
@@ -57,8 +57,6 @@ padding: 20px;
 margin-top: 20px;
 display: flex;
 flex-direction: column;
-justify-content: center;
-align-items: center;
 }
 
 
@@ -67,9 +65,25 @@ display: none;
 font-size: 1.3rem;
 }
 
-
 .slide.active {
 display: block;
+margin-left: 100px;
+}
+
+.components-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.components-grid h4 {
+    margin-bottom: 4px;
+}
+
+.components-grid p {
+    margin-top: 0;
+    margin-bottom: 14px;
 }
 
 
@@ -170,6 +184,7 @@ background: #7f0090;
     bottom: -1px;
     font-size: 16px;
     background-color: #650072;
+    color: #fff;
     position: absolute;
     margin: 0 5px 0 0;
     padding: 2px 2px;
@@ -235,4 +250,13 @@ background: #7f0090;
   left: -300px;
   width: 1220px;
   pointer-events: none;
+}
+
+.arch-icon {
+  height: 40px;
+  width: 40px;
+  top: 615px;
+  left: 165px;
+  position: absolute;
+  margin-left: 100px;
 }

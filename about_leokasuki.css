@@ -5,7 +5,7 @@ body {
     padding: 120px 0 0 0;
     font-family: Arial, sans-serif;
     background: #0f0f0f;
-    color: white;
+    color: rgb(255, 94, 0);
     justify-content: center;
     align-items: flex-start;
     background-image: url("about_me_images/Wallpaper background from yume nikki.png");
@@ -283,6 +283,7 @@ p {
     bottom: -1px;
     font-size: 16px;
     background-color: #650072;
+    color: #fff;
     position: absolute;
     margin: 0 5px 0 0;
     padding: 2px 2px;
