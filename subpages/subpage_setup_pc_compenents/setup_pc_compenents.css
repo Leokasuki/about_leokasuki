@@ -42,6 +42,11 @@ h1 {
     font-family: 'Lucida Console', monospace;
 }
 
+h2 {
+    text-align: center;
+    font-family: 'Lucida Console', monospace;
+}
+
 p {
     line-height: 1.6;
     font-size: 1.05rem;
@@ -85,6 +90,37 @@ margin-left: 100px;
     margin-top: 0;
     margin-bottom: 14px;
 }
+
+.cooling-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.cooling-col h4 {
+    margin-bottom: 6px;
+}
+
+.cooling-col p {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.benchmark-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-top: 30px;
+}
+
+.gaming-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 30px;
+}
+
 
 
 /* Navigation */
@@ -249,7 +285,19 @@ background: #7f0090;
   top: 20px;
   left: -300px;
   width: 1220px;
-  pointer-events: none;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+#soundArea {
+  position: absolute;
+  top: 20px;
+  left: 20px; 
+  width: 500px;
+  height: 500px;
+  z-index: 1;
+  background: transparent;
+  cursor: pointer;
 }
 
 .arch-icon {

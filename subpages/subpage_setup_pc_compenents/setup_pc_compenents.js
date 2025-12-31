@@ -41,3 +41,28 @@ update();
 
 initSlides('pc-slides', 'pc-nav', 'pc-indicators');
 initSlides('setup-slides', 'setup-nav', 'setup-indicators');
+
+let clickCount = 0;
+
+  const sounds = [
+    document.getElementById("emu_hello"),
+    document.getElementById("Im_emu_otori"),
+    document.getElementById("emu_otori_smile")
+  ];
+
+  let index = 0;
+  let isPlaying = false;
+
+  document.getElementById("soundArea").addEventListener("click", () => {
+    if (isPlaying) return;
+
+    const sound = sounds[index];
+    isPlaying = true;
+    sound.currentTime = 0;
+    sound.play();
+
+    sound.onended = () => {
+      isPlaying = false;
+      index = (index + 1) % sounds.length;
+    };
+  });
