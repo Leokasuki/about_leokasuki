@@ -24,22 +24,54 @@ body {
 .container_pfp,
 .container_about_me,
 .container_links,
-.container_hobbies,
 .container_gif,
 .container_about_me_wrapper,
 .update-log,
-.container_cover {
+.container_cover,
+.hobbies-list,
+.container-moon {
     background: rgba(56, 1, 70, 0.7);
     background-image: url("about_me_images/container_background.jpg");
     background-clip: padding-box;
     border-radius: 15px;
-    animation: fadeIn 0.8s ease forwards;
-    box-shadow: 0 0 20px rgba(0,0,0,0.4);
-    opacity: 0;
+
     border-width: 20px;
     border-style: solid;
     border-image: url("about_me_images/container border.png") 30 stretch;
+
+    box-shadow:
+        inset 2px 2px 0 rgba(255,255,255,0.35),
+        inset -2px -2px 0 rgba(0,0,0,0.6),
+        0 6px 12px rgba(0,0,0,0.45);
+
     padding: 10px;
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.container_pfp:hover,
+.container_about_me:hover,
+.container_links:hover,
+.container_gif:hover,
+.container_about_me_wrapper:hover,
+.update-log:hover,
+.container_cover:hover,
+.hobbies-list:hover,
+.container-moon:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        inset 2px 2px 0 rgba(255,255,255,0.4),
+        inset -2px -2px 0 rgba(0,0,0,0.6),
+        0 12px 22px rgba(0,0,0,0.6);
+}
+
+.container_pfp:hover {
+    transform: translateY(-3px) scale(1.01);
 }
 
 /* ----- Container ----- */
@@ -95,8 +127,12 @@ body {
 }
 
 .container_hobbies {
-    width: 90%;
-    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-top: 280px;
+    width: 300px;
 }
 
 .container_gif {
@@ -121,17 +157,35 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 40px;
+    margin-top: 280px;
 }
 
 .about-me-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 20px;
+}
+
+.container_hobbies {
+     display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 40px;
+    margin-top: 280px;
+}
+
+.hobbies-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-top: 280px;
 }
 
 .hobbies-list {
     list-style: none;
+    width: 200px;
 }
 
 .hobby {
@@ -200,7 +254,7 @@ p {
     border-radius: 10px;
     position: relative;
     z-index: 1;
-    margin-right: -20px;
+    left: -200px;
 }
 
 .scroll-content {
@@ -222,7 +276,7 @@ p {
     position: relative;
     z-index: 1;
     margin: 0;
-    margin-left: -20px;
+    right: 0px;
 }
 
 .desktop {
@@ -231,10 +285,12 @@ p {
     justify-content: center;
     align-items: flex-start;
     gap: 40px;
-    height: 1300px;
+    height: 1700px;
+    width: 1400px;
     background-color: #fff;
     background: transparent;
-    background: rgba(144, 0, 177, 0.5);
+    background: rgba(145, 27, 255, 0.5);
+    left: 20%;
 }
 
 .page-layout {
@@ -316,7 +372,7 @@ p {
 .computer-icon {
     position: relative;
     top: 0px;
-    right: 0px;
+    right: -100px;
     height: 70px;
     width: 70px;
     z-index: 10;
@@ -353,7 +409,7 @@ p {
     top: 0px;
     right: 0px;
     width: 120px;
-    animation: fly-diagonal-yuuka 25s linear infinite;
+    animation: fly-diagonal-yuuka 35s linear infinite;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
@@ -363,7 +419,7 @@ p {
         transform: translate(0, -100);
     }
     100% {
-        transform: translate(-35vw, 137vh);
+        transform: translate(-35vw, 180vh);
     }
 }
 
@@ -403,4 +459,43 @@ p {
     100% {
         transform: translate(-300vw, 0);
     }
+}
+
+.container-moon {
+    width: 200px;
+    text-align: center;
+}
+
+
+.moon-widget {
+  width: 192px;
+  text-align: center;
+  position: relative;
+}
+
+.moon-image {
+    width: 100%;
+    max-width: 297px;
+    height: auto;
+}
+
+.moon-link {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000;
+  width: 116px;
+  text-align: center;
+}
+
+.moon-link a {
+  color: #7f7f7f;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  text-decoration: none;
+}
+
+.moon-link a:hover {
+  text-decoration: underline;
 }
