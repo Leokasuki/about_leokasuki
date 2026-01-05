@@ -76,3 +76,18 @@ if (window.innerWidth <= 768) {
         audio.play();
     }, { once: true });
 }
+
+function togglefader() {
+    const elements = document.querySelectorAll('.scroll-wrapper, .computer-icon');
+    elements.forEach(el => {
+        if (window.innerWidth <= 768) {
+            el.style.display = 'none';
+        } else {
+            el.style.display = 'block';
+        }
+    });
+}
+
+togglefader();
+
+window.addEventListener('resize', togglefader);
