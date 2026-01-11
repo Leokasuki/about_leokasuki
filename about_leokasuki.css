@@ -20,6 +20,10 @@ body {
     overflow-y: auto;
 }
 
+.falling-snow {
+    background-image: url("about_me_images/falling\ snow.gif");
+}
+
 /* ----- Common box components ----- */
 .container_pfp,
 .container_about_me,
@@ -31,13 +35,9 @@ body {
 .hobbies-list,
 .container-moon {
     background: rgba(56, 1, 70, 0.7);
-    background-image: url("about_me_images/container_background.jpg");
+    background-image: url("about_me_images/container_background.png");
     background-clip: padding-box;
     border-radius: 15px;
-
-    border-width: 20px;
-    border-style: solid;
-    border-image: url("about_me_images/container border.png") 30 stretch;
 
     box-shadow:
         inset 2px 2px 0 rgba(255,255,255,0.35),
@@ -51,6 +51,17 @@ body {
     transition:
         transform 0.2s ease,
         box-shadow 0.2s ease;
+}
+
+.container_about_me_wrapper,
+.container_about_me,
+.update-log,
+.container_cover,
+.pfp-wrapper,
+.container_hobbies {
+    border-width: 20px;
+    border-style: solid;
+    border-image: url("about_me_images/container border.png") 30 stretch;
 }
 
 .container_pfp:hover,
@@ -94,7 +105,7 @@ body {
 }
 
 .container_pfp {
-    width: 200px;
+    width: 300px;
 }
 
 .container_about_me_wrapper {
@@ -109,6 +120,15 @@ body {
     width: 100%;
     background: transparent;
     margin: 0;
+    border-style: dotted;
+    border-width: 5px;
+}
+
+.container_about_me_inner_description {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .update-log {
@@ -117,12 +137,17 @@ body {
     background: transparent;
     margin: 0;
     background: rgba(56, 1, 70, 0.7);
-    background-image: url("about_me_images/container_background.jpg");
+    background-image: url("about_me_images/container_background.png");
     background-clip: padding-box;
 }
 
+.border-inner {
+    border-style: dotted;
+    border-width: 5px;
+}
+
 .container_links {
-    width: 200px;
+    width: 300px;
     text-align: center;
 }
 
@@ -132,7 +157,6 @@ body {
     align-items: center;
     gap: 40px;
     margin-top: 280px;
-    width: 300px;
 }
 
 .container_gif {
@@ -158,6 +182,7 @@ body {
     align-items: center;
     gap: 40px;
     margin-top: 280px;
+    background: rgba(145, 27, 255, 0.5);
 }
 
 .about-me-wrapper {
@@ -165,14 +190,24 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    background: rgba(145, 27, 255, 0.5);
+    width: 700px;
 }
 
 .container_hobbies {
-     display: flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 40px;
     margin-top: 280px;
+    background: rgba(145, 27, 255, 0.5);
+}
+
+.description-icons {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
 .hobbies-wrapper {
@@ -185,7 +220,7 @@ body {
 
 .hobbies-list {
     list-style: none;
-    width: 200px;
+    width: 300px;
 }
 
 .hobby {
@@ -224,7 +259,7 @@ p {
     height: 130px;
     border-radius: 50%;
     object-fit: cover;
-    margin: auto auto auto 30px;
+    margin: auto auto auto 70px;
     border: 3px solid #555;
 }
 
@@ -289,7 +324,6 @@ p {
     width: 1400px;
     background-color: #fff;
     background: transparent;
-    background: rgba(145, 27, 255, 0.5);
     left: 20%;
 }
 
@@ -372,7 +406,7 @@ p {
 .computer-icon {
     position: relative;
     top: 0px;
-    right: -100px;
+    right: 350px;
     height: 70px;
     width: 70px;
     z-index: 10;
@@ -462,8 +496,10 @@ p {
 }
 
 .container-moon {
-    width: 200px;
+    width: 300px;
     text-align: center;
+    justify-content: center;
+    display: flex;
 }
 
 
@@ -471,6 +507,8 @@ p {
   width: 192px;
   text-align: center;
   position: relative;
+  border-style: dotted;
+    border-width: 5px;
 }
 
 .moon-image {
