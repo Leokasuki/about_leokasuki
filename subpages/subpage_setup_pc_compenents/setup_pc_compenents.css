@@ -22,10 +22,26 @@ body {
     padding: 40px;
     margin-left: 500px;
     border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    background-clip: padding-box;
+    box-shadow:
+        inset 2px 2px 0 rgba(255,255,255,0.35),
+        inset -2px -2px 0 rgba(0,0,0,0.6),
+        0 6px 12px rgba(0,0,0,0.45);
+
+    padding: 10px;
+    opacity: 0;
     animation: fadeIn 0.8s ease forwards;
-    background: rgba(238, 98, 5, 0.4);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    background: rgba(238, 98, 5);
     z-index: 2;
+    border-width: 20px;
+    border-style: solid;
+    border-image: url("setup_pc_compenents_images/orange\ border.png") 30 stretch;
+    background-image: url("setup_pc_compenents_images/Container\ background.jpg");
+    
 }
 
 .setup-container {
@@ -51,28 +67,37 @@ p {
     line-height: 1.6;
     font-size: 1.05rem;
     font-family: 'Lucida Console', monospace;
+    background: rgba(5, 172, 238, 0.411);
+    background-color: rgba(5, 172, 238, 0.411);
+    margin: 0;
+    padding: 0.5em;
+}
+
+h4 {
+  background: rgba(5, 172, 238, 0.411);
+  margin: 0;
+    padding: 0.5em;
 }
 
 .slides {
 width: 97%;
 height: 500px;
-background: rgba(212, 164, 3, 0.5);
-border-radius: 12px;
 padding: 20px;
 margin-top: 20px;
+margin-right: 10px;
 display: flex;
 flex-direction: column;
 }
 
-
 .slide {
 display: none;
 font-size: 1.3rem;
+border-style: dotted;
+  border-width: 15px;
 }
 
 .slide.active {
 display: block;
-margin-left: 100px;
 }
 
 .components-grid {
@@ -82,29 +107,11 @@ margin-left: 100px;
     margin-top: 20px;
 }
 
-.components-grid h4 {
-    margin-bottom: 4px;
-}
-
-.components-grid p {
-    margin-top: 0;
-    margin-bottom: 14px;
-}
-
 .cooling-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 40px;
     margin-top: 30px;
-}
-
-.cooling-col h4 {
-    margin-bottom: 6px;
-}
-
-.cooling-col p {
-    margin-top: 0;
-    margin-bottom: 12px;
 }
 
 .benchmark-grid {
@@ -229,6 +236,48 @@ background: #7f0090;
     line-height: 10px;
 }
 
+.computer-icon-taskbar {
+    position: fixed;
+    bottom: 3px;
+    left: 100px;
+    height: 45px;
+    width: 45px;
+    border: inset;
+    border-color: #404040;
+    border-radius: 3px;
+    background: #671f72;
+    transform-origin: center;
+}
+
+.computer-icon-taskbar:hover {
+    animation: icon-jump-spin 0.7s ease-in-out forwards;
+}
+
+@keyframes icon-jump-spin {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    15% {
+        transform: translateY(-25px) rotate(90deg);
+    }
+
+    30% {
+        transform: translateY(-50px) rotate(180deg);
+    }
+
+    45% {
+        transform: translateY(-75px) rotate(270deg);
+    }
+
+    60% {
+        transform: translateY(-100px) rotate(360deg);
+    }
+    100% {
+        transform: translateY(0) rotate(360deg);
+    }
+}
+
 .slide-gif {
   right: 20px;
   top: 20px;
@@ -300,6 +349,7 @@ background: #7f0090;
   cursor: pointer;
 }
 
+/* 
 .arch-icon {
   height: 40px;
   width: 40px;
@@ -308,3 +358,4 @@ background: #7f0090;
   position: absolute;
   margin-left: 100px;
 }
+  */
