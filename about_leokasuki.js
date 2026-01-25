@@ -1,72 +1,6 @@
-document.querySelectorAll('.hobby .title').forEach(item => {
-    item.addEventListener('click', () => {
-        const details = item.nextElementSibling;
-        if(details.style.display === 'block'){
-            details.style.display = 'none';
-            item.textContent = item.textContent.replace('-', '+');
-        } else {
-            details.style.display = 'block';
-            item.textContent = item.textContent.replace('+', '-');
-        }
-    });
-});
 
 
-const imageList = [
-    "https://media1.tenor.com/m/wUuVjY3lpeQAAAAd/milk-chan-russia.gif",
-    "https://media1.tenor.com/m/hJDnm7pDnJQAAAAd/shikanoko-nokonoko-koshitantan-shikonoko.gif",
-    "https://media1.tenor.com/m/piNqUGoGJqEAAAAd/neco-arc-dilemma.gif",
-    "https://media1.tenor.com/m/XuVii4d1wrQAAAAd/go-white-boy-go-nge.gif",
-    "https://media1.tenor.com/m/LqdgG1SRGf0AAAAd/cirno-hatred.gif",
-    "https://media1.tenor.com/m/9gosAbRjs7YAAAAd/bocchi-boc.gif",
-    "https://cdn.discordapp.com/emojis/770707949684391939.gif?v=1",
-];
-
-const container = document.getElementById("scrollContent");
-container.style.visibility = "hidden";
-
-let position = 0;
-const scrollSpeed = 1;
-
-function appendImage(src) {
-    const img = document.createElement("img");
-    img.src = src;
-    img.style.width = "100%";
-    container.appendChild(img);
-}
-
-function animate() {
-    position -= scrollSpeed;
-    container.style.transform = `translateY(${position}px)`;
-
-    if (Math.abs(position) >= container.scrollHeight / 2) {
-        position = 0;
-    }
-
-    requestAnimationFrame(animate);
-}
-
-function preloadImages(list, callback) {
-    let loaded = 0;
-    const total = list.length;
-    list.forEach(src => {
-        const img = new Image();
-        img.src = src;
-        img.onload = img.onerror = () => {
-            loaded++;
-            if (loaded === total) {
-                callback();
-            }
-        };
-    });
-}
-
-preloadImages(imageList, () => {
-    imageList.forEach(src => appendImage(src));
-    imageList.forEach(src => appendImage(src));
-    container.style.visibility = "visible";
-    animate();
-});
+//music for mobile players
 
 if (window.innerWidth <= 768) {
     const audio = new Audio('about_me_mp3,mp4/maintenance work.mp3');
@@ -77,6 +11,8 @@ if (window.innerWidth <= 768) {
     }, { once: true });
 }
 
+
+//togglefader
 function togglefader() {
     const elements = document.querySelectorAll('.scroll-wrapper, .computer-icon');
     elements.forEach(el => {
@@ -91,3 +27,75 @@ function togglefader() {
 togglefader();
 
 window.addEventListener('resize', togglefader);
+
+
+
+//Mettaton says crazy things to you
+document.addEventListener("DOMContentLoaded", () => {
+const container = document.querySelector(".speech-container");
+const textElement = document.querySelector(".speech-text");
+
+
+const introTexts = [
+"HELLO AND WELCOME!",
+"So.. you click on this website?",
+"I'm glad that you are here"
+];
+
+
+const loopTexts = [
+"Super idol 的笑容都沒你的甜.",
+"OK GARMIN, SAVE VIDEO!",
+"What color is your bugatti?",
+"What's 9 + 10?",
+"REMEMBER! No russian.",
+"Nice Ass!"
+];
+
+
+const typingDuration = 1500;
+const delayBeforeShow = 2000;
+const delayAfterTyping = 10000;
+const newAppearance = 20000;
+
+
+let introUsed = false;
+
+
+function showBubble(isFirst = false) {
+textElement.textContent = "";
+
+
+const text = !introUsed
+? (introUsed = true, introTexts[Math.floor(Math.random() * introTexts.length)])
+: loopTexts[Math.floor(Math.random() * loopTexts.length)];
+
+
+const typingSpeed = typingDuration / text.length;
+
+
+const startTyping = () => {
+container.style.display = "block";
+
+
+let i = 0;
+const typing = setInterval(() => {
+textElement.textContent += text[i++];
+if (i === text.length) {
+clearInterval(typing);
+
+setTimeout(() => {
+container.style.display = "none";
+setTimeout(showBubble, newAppearance);
+}, delayAfterTyping);
+}
+}, typingSpeed);
+};
+
+
+isFirst ? setTimeout(startTyping, delayBeforeShow) : startTyping();
+}
+
+
+showBubble(true);
+});

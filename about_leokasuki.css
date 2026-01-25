@@ -403,13 +403,26 @@ p {
     line-height: 10px;
 }
 
+.computer-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+}
+
+
 .computer-icon {
-    position: relative;
-    top: 0px;
-    right: 350px;
-    height: 70px;
     width: 70px;
-    z-index: 10;
+    height: 70px;
+    margin-left: -670px;
+}
+
+
+.computer-icon-text {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #4da3ff;
+    margin-left: -670px;
 }
 
 .computer-icon-taskbar {
@@ -425,18 +438,26 @@ p {
     transform-origin: center;
 }
 
+.computer-link:hover .computer-icon {
+transform: scale(1.28) rotate(-6deg);
+}
+
+.computer-link:hover .computer-icon-text {
+transform: scale(1.28) rotate(-6deg);
+}
+
 #computer-icon-area {
   position: absolute;
-    bottom: 3px;
+    bottom: 2px;
     left: 100px;
-    height: 52px;
+    height: 53px;
     width: 52px;
     background: transparent;
     cursor: pointer;
 }
 
-.computer-icon-taskbar:hover {
-    animation: icon-jump-spin 0.7s ease-in-out forwards;
+.taskbar:has(#computer-icon-area:hover) .computer-icon-taskbar {
+animation: icon-jump-spin 0.7s ease-in-out forwards;
 }
 
 @keyframes icon-jump-spin {
@@ -489,6 +510,31 @@ p {
     bottom: 29px;
     left: 630px;
     width: 120px;
+}
+
+.speech-container {
+    position: fixed;
+    bottom: 140px;
+    left: 690px;
+    display: none;
+}
+
+
+
+.speech-bubble {
+width: 150px;
+}
+
+
+.speech-text {
+position: absolute;
+top: 0px;
+left: 10px;
+width: 130px;
+font-size: 14px;
+font-family: monospace;
+color: #fff;
+pointer-events: none;
 }
 
 .yuuka {

@@ -70,7 +70,6 @@ h1 {
 h2 {
     text-align: center;
     font-family: 'Lucida Console', monospace;
-    background: rgba(0,0,0,0.45);
     margin: 0;
     padding: 0.5em;
 }
@@ -81,13 +80,11 @@ p {
     font-family: 'Lucida Console', monospace;
     margin: 0;
     padding: 0.5em;
-    background: rgba(0,0,0,0.45);
 }
 
 h4 {
   margin: 0;
     padding: 0.5em;
-    background: rgba(0,0,0,0.45);
     text-decoration: underline;
 }
 
@@ -113,6 +110,14 @@ display: block;
 height: 1301px;
 }
 
+.left {
+  background: rgba(0,0,0,0.45);
+}
+
+.right {
+  background: rgba(0,0,0,0.45);
+}
+
 .components-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -125,6 +130,18 @@ height: 1301px;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 40px;
     margin-top: 30px;
+}
+
+.cooling-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: rgba(0,0,0,0.45);
+}
+
+.overview-col {
+  background: rgba(0,0,0,0.45);
+  display: grid;
 }
 
 .benchmark-grid {
@@ -141,7 +158,13 @@ height: 1301px;
     margin-top: 30px;
 }
 
+.benchmark-col {
+  background: rgba(0,0,0,0.45);
+}
 
+.game-col {
+  background: rgba(0,0,0,0.45);
+}
 
 /* Navigation */
 .navigation {
@@ -264,17 +287,17 @@ background: #7f0090;
 
 #computer-icon-area {
   position: absolute;
-    bottom: 3px;
+    bottom: 2px;
     left: 100px;
-    height: 52px;
+    height: 53px;
     width: 52px;
     background: transparent;
     cursor: pointer;
 }
 
 
-.computer-icon-taskbar:hover {
-    animation: icon-jump-spin 0.7s ease-in-out forwards;
+.taskbar:has(#computer-icon-area:hover) .computer-icon-taskbar {
+animation: icon-jump-spin 0.7s ease-in-out forwards;
 }
 
 @keyframes icon-jump-spin {
