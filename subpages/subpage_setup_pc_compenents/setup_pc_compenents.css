@@ -330,6 +330,22 @@ animation: icon-jump-spin 0.7s ease-in-out forwards;
   top: 20px;
 }
 
+.ram {
+  position: absolute;
+  height: 60px;
+  width: 30px;
+  margin-left: -20px;
+  margin-top: -20px;
+}
+
+.rem {
+  position: absolute;
+  height: 60px;
+  width: 30px;
+  margin-left: -20px;
+  margin-top: -20px;
+}
+
 .kirby {
     position: fixed;
     bottom: 0;

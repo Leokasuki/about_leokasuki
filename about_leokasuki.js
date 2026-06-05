@@ -30,6 +30,8 @@ window.addEventListener('resize', togglefader);
 
 
 
+
+
 //Mettaton says crazy things to you
 document.addEventListener("DOMContentLoaded", () => {
 const container = document.querySelector(".speech-container");
@@ -56,7 +58,7 @@ const loopTexts = [
 const typingDuration = 1500;
 const delayBeforeShow = 2000;
 const delayAfterTyping = 10000;
-const newAppearance = 20000;
+const newAppearance = 10000;
 
 
 let introUsed = false;
@@ -92,10 +94,34 @@ setTimeout(showBubble, newAppearance);
 }, typingSpeed);
 };
 
-
 isFirst ? setTimeout(startTyping, delayBeforeShow) : startTyping();
 }
 
-
 showBubble(true);
+});
+
+
+
+
+//container-games
+const memeIcon = document.querySelector('.meme-icon');
+const wrapper = document.getElementById('dynamic-container-wrapper');
+
+const memes = [
+    document.getElementById("")
+];
+
+
+memeIcon.addEventListener('click', () => {
+    if (!document.querySelector('.dynamic-container')) {
+        const newContainer = document.createElement('div');
+        newContainer.classList.add('dynamic-container');
+        newContainer.textContent = '';
+
+        wrapper.appendChild(newContainer);
+
+        setTimeout(() => {
+            newContainer.classList.add('show');
+        }, 10);
+    }
 });

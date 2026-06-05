@@ -33,7 +33,9 @@ body {
 .update-log,
 .container_cover,
 .hobbies-list,
-.container-moon {
+.container-moon,
+.container-games,
+.dynamic-container {
     background: rgba(56, 1, 70, 0.7);
     background-image: url("about_me_images/container_background.png");
     background-clip: padding-box;
@@ -149,6 +151,47 @@ body {
 .container_links {
     width: 300px;
     text-align: center;
+}
+
+.container-games {
+    width: 300px;
+    height: 100px;
+    text-align: center;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.meme-icon {
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+}
+
+.meme-icon-text {
+    font-size: 12px;
+    color: #fcff4d;
+    margin: 0px;
+}
+
+.meme-icon:hover {
+    transform: scale(1.1);
+}
+
+.meme-icon-text:hover {
+    transform: scale(1.1);
+}
+
+.dynamic-container {
+    width: 310px; 
+    height: 80px;
+}
+
+.dynamic-container.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .container_hobbies {
